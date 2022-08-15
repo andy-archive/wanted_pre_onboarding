@@ -1,0 +1,41 @@
+{
+  "name": "wanted-backend-pre-onboarding",
+  "version": "1.0.0",
+  "description": "4th wanted-backend-pre-onboarding-repository",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-taekwonlee/wanted_pre_onboarding.git"
+  },
+  "keywords": [
+    "wanted",
+    "pre_onboarding",
+    "backend",
+    "nodejs",
+    "postgresql"
+  ],
+  "author": "taekwon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-taekwonlee/wanted_pre_onboarding/issues"
+  },
+  "homepage": "https://github.com/dev-taekwonlee/wanted_pre_onboarding#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19",
+    "sequelize-cli": "^6.4.1"
+  }
+}
