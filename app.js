@@ -1,10 +1,20 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const db = require("./models");
 
 const app = express();
 const env = process.env;
 const PORT = env.PORT || 8080;
+
+db.sequelize
+  .sync({ force: false })
+  .then(() => {
+    console.log("Synced database.");
+  })
+  .catch(err => {
+    console.log("Failed to sync database: " + err.message);
+  });
 
 app.use(cors());
 app.use(bodyParser.json());
