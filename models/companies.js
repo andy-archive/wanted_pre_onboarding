@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Company = sequelize.define("Company",
     {
-      company_id: {
+      companyId: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.STRING(50),
         allowNull: false,
+        unique: true,
       },
     },
     {

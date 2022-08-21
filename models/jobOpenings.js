@@ -16,12 +16,10 @@ module.exports = (sequelize, DataTypes) => {
       description: {
         type: DataTypes.STRING(1000),
         allowNull: false,
-        defaultValue: false,
       },
       techStack: {
         type: DataTypes.STRING(100),
         allowNull: true,
-        defaultValue: false,
       },
       nationality: {
         type: DataTypes.STRING(50),

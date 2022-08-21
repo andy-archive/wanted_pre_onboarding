@@ -1,7 +1,8 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const db = require("./models");
+const routes = require("./routes");
 
 const app = express();
 const env = process.env;
@@ -21,8 +22,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.json({ Message: "Welcome to wanted_job_opening" });
+  res.json({ Message: "Welcome to wanted job opening!" });
 });
+app.use("/", routes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
